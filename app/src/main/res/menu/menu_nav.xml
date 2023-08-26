@@ -4,17 +4,17 @@
         <item
             android:id="@+id/nav_inbox"
             android:checked="true"
-            android:icon="@android:drawable/sym_action_email"
+            android:icon="@drawable/round_email_24"
             android:title="@string/nav_inbox" />
 
         <item
             android:id="@+id/nav_drafts"
-            android:icon="@android:drawable/ic_menu_edit"
+            android:icon="@drawable/round_edit_24"
             android:title="@string/nav_drafts" />
 
         <item
             android:id="@+id/nav_sent"
-            android:icon="@android:drawable/ic_menu_send"
+            android:icon="@drawable/round_send_24"
             android:title="@string/nav_sent" />
 
         <item
@@ -28,12 +28,12 @@
         <menu>
             <item
                 android:id="@+id/nav_help"
-                android:icon="@android:drawable/ic_menu_help"
+                android:icon="@drawable/round_help_24"
                 android:title="@string/nav_help" />
 
             <item
                 android:id="@+id/nav_feedback"
-                android:icon="@android:drawable/sym_action_email"
+                android:icon="@drawable/round_feedback_24"
                 android:title="@string/nav_feedback" />
 
         </menu>

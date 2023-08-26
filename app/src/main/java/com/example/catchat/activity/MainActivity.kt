@@ -1,4 +1,4 @@
-package com.example.catchat
+package com.example.catchat.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,6 +10,7 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
+import com.example.catchat.R
 import com.example.catchat.fragment.DraftsFragment
 import com.example.catchat.fragment.InboxFragment
 import com.example.catchat.fragment.SentItemsFragment
@@ -29,7 +30,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 		ft.commit()
 
 		val drawer: DrawerLayout = findViewById(R.id.drawer_layout)
-		val toggle = ActionBarDrawerToggle(this, drawer, toolbar, R.string.nav_open_drawer, R.string.nav_close_drawer)
+		val toggle = ActionBarDrawerToggle(
+			this, drawer, toolbar,
+			R.string.nav_open_drawer,
+			R.string.nav_close_drawer
+		)
 		drawer.addDrawerListener(toggle)
 		toggle.syncState()
 
@@ -55,10 +60,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 			val ft = supportFragmentManager.beginTransaction()
 			ft.replace(R.id.content_frame, fragment)
 			ft.commit()
-		}
-		else {
+		} else
 			startActivity(intent)
-		}
 		findViewById<DrawerLayout>(R.id.drawer_layout).closeDrawer(GravityCompat.START)
 		return true
 	}
